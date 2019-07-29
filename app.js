@@ -91,8 +91,9 @@ app.get("/api/displayFavorites", function(req,res){
 }); // display favs route
   
 // Server listener
-app.listen(port, ip, function () {
-  console.log("Express server is running and listening on: " + ip);
+app.listen(port || process.env.PORT, ip || process.env.IP, function () {
+  console.log("Express server is running...");
 });
+
 
 
