@@ -1,0 +1,16 @@
+<% include partials/header %>
+</head>
+<body>
+  <a id="searchLink" href="/">Back to Search</a>
+  <h1 id="favHeader">
+    My Favorites
+  </h1>
+  <% rows.forEach(function(row) { %>
+  <a class= "keywordLink" ><%= row ['keyword'] %></a>
+                  
+   <%  }) %>
+  <hr>
+  <div id = "favorites"> 
+  </div>
+
+<% include partials/footer %>
