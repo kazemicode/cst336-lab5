@@ -1,7 +1,6 @@
 $(document).ready(function(){
-  // have to tie dynamic object of class favoriteIcon to a static object for this to work in favorites view
-  $(document).on("click", ".favoriteIcon", function() { 
-    //alert("it works!");
+  $(document).on("click", ".favoriteIcon", function() {
+    alert("it works!");
     var imageURL = $(this).prev().attr("src");
     if($(this).attr("src") == "img/fav_off.png"){
       $(this).attr("src", "img/fav_on.png");
@@ -26,12 +25,12 @@ $(document).ready(function(){
          $("#favorites").html("");
           rows.forEach(function(row, index){
             (index % 4 == 0) ?  $("#favorites").append('<br>') : $("#favorites").append('');
-            $("#favorites").append("<div class = 'imageContainer'> <img class= 'image' src='" +row.imageURL+ "' width='200' height='200'><img class = 'favoriteIcon' src='img/fav_on.png' width='20'></div>");
+            $("#favorites").append("<div class = 'imageContainer'> <img class= 'image' src='" +row.imageURL+ "' width='200' height= '200'><img class = 'favoriteIcon' src='img/fav_on.png' width='20'></div>");
+           
           })
        }
     }); //ajax
   }); // keywordLink onClick
-  
   
   function updateFavorite(action, imageURL) {
     $.ajax({
@@ -43,5 +42,4 @@ $(document).ready(function(){
              }
     }); //ajax
   } // updateFavorite
-  
-  }); //document ready
+});

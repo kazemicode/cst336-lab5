@@ -66,7 +66,11 @@ module.exports = {
     user: "bbfb8d889bb3ef",
     password: "e8440918",
     database: "heroku_d7d0586aaa04448"
+    //host: "localhost",
+    //user: "root",
+    //password: "",
+    //database: "img_gallery"
   })
     return conn;
   }
-}  
+}
