@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $(document).on("click", ".favoriteIcon", function() {
-    alert("it works!");
+    //alert("it works!");
     var imageURL = $(this).prev().attr("src");
     if($(this).attr("src") == "img/fav_off.png"){
       $(this).attr("src", "img/fav_on.png");
