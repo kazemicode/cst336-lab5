@@ -91,14 +91,10 @@ app.get("/api/displayFavorites", function(req,res){
 }); // display favs route
   
 // Server listener
-// app.listen(port || process.env.PORT, ip || process.env.IP, function () {
-//   console.log("Express server is running...");
-// });
+ app.listen(port || process.env.PORT, ip || process.env.IP, function () {
+   console.log("Express server is running...");
+ });
 
-// // configuration for Heroku
-app.listen(process.env.PORT, process.env.IP, function(){
-  console.log("Express Server is Running. . . ")
-});
 
 
 
